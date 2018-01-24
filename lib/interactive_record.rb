@@ -35,6 +35,7 @@ class InteractiveRecord
     column_names.delete_if{|column|
       binding.pry
       column = "id"}
+    column_names
   end
 
 
