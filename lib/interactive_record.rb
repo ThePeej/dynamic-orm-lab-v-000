@@ -61,7 +61,6 @@ class InteractiveRecord
     key = attr.keys.first.to_s
     value = attr.values.first
     sql = "SELECT * FROM #{self.table_name} WHERE #{key} = '#{value}'"
-    binding.pry
     DB[:conn].execute(sql)
   end
 
