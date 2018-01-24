@@ -3,9 +3,6 @@ require 'active_support/inflector'
 require 'pry'
 
 class InteractiveRecord
-  self.column_names.each do |name|
-    attr_accessor name.to_sym
-  end
 
   def self.table_name
     table_name = self.to_s.downcase.pluralize
@@ -21,6 +18,10 @@ class InteractiveRecord
       column_names << column["name"]
     end
     column_names
+  end
+
+  self.column_names.each do |name|
+    attr_accessor name.to_sym
   end
 
   def initialize(options={})
