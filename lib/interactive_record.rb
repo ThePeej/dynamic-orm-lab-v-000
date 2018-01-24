@@ -20,9 +20,9 @@ class InteractiveRecord
     column_names
   end
 
-  self.column_names.each do |name|
-    attr_accessor name.to_sym
-  end
+  # self.column_names.each do |name|
+  #   attr_accessor name.to_sym
+  # end
 
   def initialize(options={})
     options.each do |property, value|
