@@ -48,10 +48,10 @@ class InteractiveRecord
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{self.table_name_for_insert}")[0][0]
   end
 
-  def find_by_name(name)
+  def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name_for_insert} WHERE name = ?"
     options = DB[:conn].execute(sql, name)
-    self.class.new(options)
+    self.new(options)
     binding.pry
   end
 
