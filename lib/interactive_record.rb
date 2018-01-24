@@ -34,7 +34,7 @@ class InteractiveRecord
     column_names = self.class.column_names
     column_names.delete_if{|column|
       binding.pry
-      column = "id"}
+      column == "id"}
     column_names
     binding.pry
   end
