@@ -52,6 +52,7 @@ class InteractiveRecord
     sql = "SELECT * FROM #{self.table_name_for_insert} WHERE name = ?"
     options = DB[:conn].execute(sql, name)
     self.class.new(options)
+    binding.pry
   end
 
 
