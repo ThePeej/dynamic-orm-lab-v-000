@@ -36,6 +36,7 @@ class InteractiveRecord
       binding.pry
       column = "id"}
     column_names
+    binding.pry
   end
 
 
