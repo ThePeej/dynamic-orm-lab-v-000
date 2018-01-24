@@ -18,7 +18,6 @@ class InteractiveRecord
       column_names << column["name"]
     end
     column_names
-    binding.pry
   end
 
   # self.column_names.each do |name|
