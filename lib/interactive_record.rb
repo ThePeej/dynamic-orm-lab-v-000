@@ -26,7 +26,7 @@ class InteractiveRecord
 
   def initialize(options={})
     options.each do |property, value|
-      self.send("#{property}=", value)
+      self.send("#{property}=", value) if property.is_a?(String)
     end
   end
 
