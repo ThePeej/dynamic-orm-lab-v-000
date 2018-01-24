@@ -43,7 +43,7 @@ class InteractiveRecord
   end
 
   def save
-    sql = "INSERT INTO (table name) (column names) VALUES (values)"
+    sql = "INSERT INTO #{self.table_name_for_insert} (column names) VALUES (values)"
 
     DB[:conn].execute(sql)
 
