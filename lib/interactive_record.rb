@@ -4,6 +4,10 @@ require 'pry'
 
 class InteractiveRecord
 
+  self.column_names.each do |name|
+    attr_accessor name.to_sym
+  end
+
   def self.table_name
     table_name = self.to_s.downcase.pluralize
   end
