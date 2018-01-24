@@ -58,7 +58,7 @@ class InteractiveRecord
   end
 
   def self.find_by(attr)
-    binding.pry
+    key = attr.keys[0].to_s
     sql = "SELECT * FROM #{self.table_name} WHERE "
 
   end
