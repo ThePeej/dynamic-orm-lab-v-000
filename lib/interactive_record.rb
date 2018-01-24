@@ -3,7 +3,6 @@ require 'active_support/inflector'
 require 'pry'
 
 class InteractiveRecord
-
   self.column_names.each do |name|
     attr_accessor name.to_sym
   end
