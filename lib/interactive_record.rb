@@ -48,5 +48,9 @@ class InteractiveRecord
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{self.table_name_for_insert}")[0][0]
   end
 
+  def find_by_name
+
+  end
+
 
 end
