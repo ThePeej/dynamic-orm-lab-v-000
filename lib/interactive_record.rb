@@ -48,6 +48,7 @@ class InteractiveRecord
     DB[:conn].execute(sql)
 
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{self.table_name_for_insert}").flatten
+    binding.pry
 
   end
 
