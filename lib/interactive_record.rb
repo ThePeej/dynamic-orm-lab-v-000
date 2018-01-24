@@ -31,7 +31,10 @@ class InteractiveRecord
   end
 
   def col_names_for_insert
-    column_names = self.class.column_names.delete_if{|column| column = "id"}
+    column_names = self.class.column_names.delete_if{|column|
+      binding.pry
+      column = "id"
+    }
     binding.pry
     column_names
   end
