@@ -12,5 +12,8 @@ class InteractiveRecord
 
     table_info = DB[:conn].execute(sql)
     column_names = []
+
+    binding.pry
+    table_info.each do |
   end
 end
